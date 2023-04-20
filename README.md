@@ -1,7 +1,7 @@
 # resampling
 
--f:[audio files path] 
+-f:[audio path list]
 
--o:[output dir path]
+-o:[output dir]
 
--sr_out:[output wave file sampling rate]
+-sr_out:[sampling rate]
