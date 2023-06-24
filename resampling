@@ -1,3 +1,0 @@
-#/bin/sh
-
-/home/suto/pyEnvs/audio_base/bin/python /home/suto/command/resampling/resampling.py -f "$1" -o "$2" -sr_out "$3"
