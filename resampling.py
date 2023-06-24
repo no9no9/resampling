@@ -5,7 +5,7 @@ import soundfile
 import argparse
 
 
-def main(files_list,outdir_path,out_sr,out_dtype):
+def resample(files_list,outdir_path,out_sr,out_dtype):
     files_num = len(files_list)
     for num,file in enumerate(files_list):
         data, sr = librosa.load(file,sr=None,mono=True)
@@ -40,7 +40,7 @@ if __name__=="__main__":
     files_list = files_to_list(args.files_list)
     outdir_path = args.outdir_path
     
-    main(files_list, outdir_path,args.sampling_rate_output,args.output_datatype)
+    resample(files_list, outdir_path,args.sampling_rate_output,args.output_datatype)
     
 
 
