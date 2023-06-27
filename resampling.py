@@ -3,11 +3,12 @@ import os
 import librosa
 import soundfile
 import argparse
+import tqdm
 
 
 def resample(files_list,outdir_path,out_sr,out_dtype):
     files_num = len(files_list)
-    for num,file in enumerate(files_list):
+    for num,file in tqdm.tqdm(enumerate(files_list)):
         data, sr = librosa.load(file,sr=None,mono=True)
         data = librosa.resample(y=data,orig_sr=sr, target_sr=out_sr)
         
@@ -16,7 +17,6 @@ def resample(files_list,outdir_path,out_sr,out_dtype):
         soundfile.write(write_path,data,out_sr,subtype=out_dtype)
         print(f'{num}/{files_num}: {write_path}')
     return 0
-
 
 def files_to_list(files_path):
     with open(files_path, encoding='utf-8') as f:
