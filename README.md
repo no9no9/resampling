@@ -4,7 +4,7 @@
 
 -o:[output dir]
 
--sr_out:[sampling rate]
+-s:[sampling rate]
 
 # useage
 ```sh
