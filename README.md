@@ -1,13 +1,13 @@
 # resampling
 
--f:[audio path list]
+-f: textfile path
 
--o:[output dir]
+-o: output dir path
 
--s:[sampling rate]
+-s: samplingrate
 
 # useage
 ```sh
 ls [waves/dir/path]/*.wav > list.txt
-python resampling.py -f list.txt -o [waves/out/dir/path] -sr_out 16000
+python resampling.py -f list.txt -o [out/dir/path] -s 16000 -T 
 ```
